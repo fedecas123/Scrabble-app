@@ -232,14 +232,13 @@ This function is to find the best possible move in that moment for a CPU player,
 * Returns an empty list ([]) if no valid move is found.
 
 **Complexity**
-* **Average Case Complexity**: O(L!⋅W+m⋅n^2⋅w)
+* **Average Case Complexity**: O(L!+m⋅n^2⋅w)
    * L: Number of CPU letters (≤7).
-   * W: Cost of dictionary lookups (average O(1)).
    * m: Number of possible words generated.
    * n: Size of the board (typically 15).
    * w: Maximum word length.
 
-* **Worst Case Complexity**: O(L!⋅W+m⋅n^2⋅w)
+* **Worst Case Complexity**: O(L!+m⋅n^2⋅w)
    * Similar to the average case but accounts for more words and positions to validate.
 
 **Steps**
