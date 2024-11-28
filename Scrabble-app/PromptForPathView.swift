@@ -15,7 +15,7 @@ struct PromptForPathView: View {
     
     var body: some View {
         VStack {
-            Text("Please enter the (absolute) path to the scrabble file (Scrabble-app):")
+            Text("Please enter the (absolute) path to the scrabble file (Scrabble-app-main):")
                 .font(.headline)
                 .padding(.top)
             
@@ -50,8 +50,8 @@ struct PromptForPathView: View {
         }
         .onChange(of: continuePressed) { _, newValue in
             if !path.isEmpty && newValue {
-                if !path.hasSuffix("/Scrabble-app") {
-                    error = "Please enter the path to the Scrabble file (Scrabble-app)"
+                if !path.hasSuffix("/Scrabble-app-main") {
+                    error = "Please enter the path to the Scrabble file (Scrabble-app-main)"
                 } else {
                     setPathToPythonFiles(path: path)
                     nav.showScrabble = true
